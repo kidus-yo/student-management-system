@@ -1,12 +1,15 @@
 from students import *
+
 index = 0
+index1 = 0
 running = True
+
 def main_menu():
    print("Welcome to Student Managment System💢")
    print("Main Menu: ")
    print("1. Add Student")
-   print("2. View Student")
-   print("3. Search Student")
+   print("2. Search Student")
+   print("3. View Student")
    print("4. Update Student")
    print("5. Delete Student")
    print("6. View top Student")
@@ -39,27 +42,38 @@ def add_student():
             "programming": programming, 
             }
 
-   studnets_list.append(students)
+   students_list.append(students)
             
 def search_student(running, index):
    number = int(input("Enter the ID of the student: "))
    while running:     
-    if number != studnets_list[index]["ID"]:
+    if number != students_list[index]["ID"]:
       index+=1
-    elif number == studnets_list[index]["ID"]:
+    elif number == students_list[index]["ID"]:
       
-      print(f"Student Name: {studnets_list[index]["name"]}")
-      print(f"ID: {studnets_list[index]["ID"]}")
-      print(f"Age: {studnets_list[index]["age"]}")
-      print(f"Department: {studnets_list[index]["department"]}")
-      print(f"Math Grade: {studnets_list[index]["math"]}")
-      print(f"Physics Grade: {studnets_list[index]["physics"]}")
-      print(f"Chemistry Grade: {studnets_list[index]["chemistry"]}")
-      print(f"Programming Grade: {studnets_list[index]["programming"]}")
+      print(f"Student Name: {students_list[index]["name"]}")
+      print(f"ID: {students_list[index]["ID"]}")
+      print(f"Age: {students_list[index]["age"]}")
+      print(f"Department: {students_list[index]["department"]}")
+      print(f"Math Grade: {students_list[index]["math"]}")
+      print(f"Physics Grade: {students_list[index]["physics"]}")
+      print(f"Chemistry Grade: {students_list[index]["chemistry"]}")
+      print(f"Programming Grade: {students_list[index]["programming"]}")
       running = False
       break
     else:
       print("Not Found!❌")
+      break
     
-
+def view_stidents(index1):
+ while True:  
+   print(students_list[index1]["name"])
+   print(students_list[index1]["ID"])
+   print(students_list[index1]["age"])
+   print(students_list[index1]["department"])
+   print(students_list[index1]["math"])
+   print(students_list[index1]["physics"])
+   print(students_list[index1]["chemistry"])
+   print(students_list[index1]["programming"])         
+   index1+=1
      

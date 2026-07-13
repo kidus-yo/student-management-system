@@ -8,6 +8,8 @@ def main():
     add_student()
   elif choice == 2:
    search_student(running, index)
+  elif choice == 3:
+   view_stidents(index1)
   elif choice == 11:
    break
 main()

@@ -1,1 +1,1 @@
-studnets_list  = []
+students_list  = []
