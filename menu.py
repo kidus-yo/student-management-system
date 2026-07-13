@@ -1,5 +1,6 @@
 from students import *
 index = 0
+running = True
 def main_menu():
    print("Welcome to Student Managment System💢")
    print("Main Menu: ")
@@ -40,7 +41,25 @@ def add_student():
 
    studnets_list.append(students)
             
-def search_student():
-   id = int(input("Enter the ID of the student: "))
+def search_student(running, index):
+   number = int(input("Enter the ID of the student: "))
+   while running:     
+    if number != studnets_list[index]["ID"]:
+      index+=1
+    elif number == studnets_list[index]["ID"]:
+      
+      print(f"Student Name: {studnets_list[index]["name"]}")
+      print(f"ID: {studnets_list[index]["ID"]}")
+      print(f"Age: {studnets_list[index]["age"]}")
+      print(f"Department: {studnets_list[index]["department"]}")
+      print(f"Math Grade: {studnets_list[index]["math"]}")
+      print(f"Physics Grade: {studnets_list[index]["physics"]}")
+      print(f"Chemistry Grade: {studnets_list[index]["chemistry"]}")
+      print(f"Programming Grade: {studnets_list[index]["programming"]}")
+      running = False
+      break
+    else:
+      print("Not Found!❌")
+    
 
-   
+     

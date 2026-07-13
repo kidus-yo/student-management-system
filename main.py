@@ -7,7 +7,7 @@ def main():
   if choice == 1:
     add_student()
   elif choice == 2:
-   search_student()
+   search_student(running, index)
   elif choice == 11:
    break
 main()
