@@ -3,6 +3,7 @@ from students import *
 index = 0
 index1 = 0
 running = True
+running1 = True
 
 def main_menu():
    print("Welcome to Student Managment System💢")
@@ -65,8 +66,8 @@ def search_student(running, index):
       print("Not Found!❌")
       break
     
-def view_stidents(index1):
- while True:  
+def view_stidents(index1, running1):
+ while running1:  
    print(students_list[index1]["name"])
    print(students_list[index1]["ID"])
    print(students_list[index1]["age"])
@@ -77,3 +78,6 @@ def view_stidents(index1):
    print(students_list[index1]["programming"])         
    index1+=1
      
+   if students_list[index1]["name"] == "":
+     running1 = False
+     break  

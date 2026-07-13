@@ -9,7 +9,7 @@ def main():
   elif choice == 2:
    search_student(running, index)
   elif choice == 3:
-   view_stidents(index1)
+   view_stidents(index1, running1)
   elif choice == 11:
    break
 main()
