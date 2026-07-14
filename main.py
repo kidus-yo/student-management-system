@@ -11,7 +11,7 @@ def main():
   elif choice == 3:
    view_stidents()
   elif choice == 4:
-   update_student()
+   update_student(index, running)
   elif choice == 11:
    print("-" * 30)
    print("Wish you the best Luck🌼🌷")

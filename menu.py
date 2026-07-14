@@ -74,5 +74,36 @@ def view_stidents():
    print(f"Department: {students["department"]}")
    print("-" * 30)
 
-def update_student():
-   update = int(input("Enter the ID of the student you want to update: "))
+def update_student(index, running):
+  update = int(input("Enter the ID of the student you want to update: "))
+  while running:
+   if update == students_list[index]["ID"]:
+     
+     name = input("Enter Name: ")
+     student_ID = int(input("Enter an ID: "))
+     age = int(input("Enter age: "))
+     department = input("Enter department: ")
+     math = input("Enter Math grade: ")
+     physics = int(input("Enter Physics grade: "))
+     chemistry = int(input("Enter Chemistry grade: "))
+     programming = int(input("Enter Programming grade: "))
+
+     students_list[index]["name"] = name
+     students_list[index]["ID"] = student_ID
+     students_list[index]["age"] = age
+     students_list[index]["department"] = department
+     students_list[index]["math"] = math
+     students_list[index]["physics"] = physics
+     students_list[index]["chemistry"] = chemistry
+     students_list[index]["programming"] = programming
+
+     print(f"Student Updated Successfully✅")
+     
+     running = False
+     break;
+   elif update != students_list[index]["ID"]:
+     index+=1
+   else:
+     print("Student NOT Found❌")
+
+
