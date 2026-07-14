@@ -106,4 +106,15 @@ def update_student(index, running):
    else:
      print("Student NOT Found❌")
 
-
+def delete_student(index, running):
+  delete = int(input("Enter the id of the student you want to delete: "))
+  while running:
+   if delete == students_list[index]["ID"]:
+     students_list.pop(index)
+     print("Student Deleted Successfully!✅")
+     running = False
+     break
+   elif delete != students_list[index]["ID"]:
+     index+=1
+   else:
+     print("Student NOT found!‼️")
