@@ -9,7 +9,12 @@ def main():
   elif choice == 2:
    search_student(running, index)
   elif choice == 3:
-   view_stidents(index1, running1)
+   view_stidents()
+  elif choice == 4:
+   update_student()
   elif choice == 11:
+   print("-" * 30)
+   print("Wish you the best Luck🌼🌷")
+   print("-" * 30)
    break
 main()
