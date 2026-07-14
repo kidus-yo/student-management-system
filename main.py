@@ -1,4 +1,4 @@
-#Student Management system
+#Student Management System
 from menu import *
 
 def main():
