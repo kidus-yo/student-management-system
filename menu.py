@@ -179,3 +179,11 @@ def class_average(index, count, total1):
       print(f"Class Average: {average_total}%")
 
      
+def total_students():
+  number_students = len(students_list)
+  print(f"Total Students: {number_students}")
+  print("_" * 30)
+
+def clear_records():
+  students_list.clear()
+  print("Records cleared Sucessfully!✅")

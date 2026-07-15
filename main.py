@@ -20,6 +20,10 @@ def main():
    lowest_student(index, count)
   elif choice == 8:
    class_average(index, count, total1)
+  elif choice == 9:
+   total_students()
+  elif choice == 10:
+   clear_records()
   elif choice == 11:
    print("-" * 30)
    print("Wish you the best Luck🌼🌷")
