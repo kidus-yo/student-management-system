@@ -4,6 +4,7 @@ from students import *
 index = 0
 running = True
 count_student = 1
+total1 = 0
 
 count = 0
 
@@ -123,7 +124,7 @@ def delete_student(index, running):
    else:
      print("Student NOT found!‼️")
 
-def top_student(index, count, running):
+def top_student(index, count):
  while count < len(students_list):
    grade1 =  int(students_list[index]["math"])
    grade2 =  int(students_list[index]["physics"])
@@ -139,4 +140,42 @@ def top_student(index, count, running):
    print(f"Average: {average}")
    count+=1
    index+=1
- 
+
+def lowest_student(index, count):
+  while count < len(students_list):
+   grade1 =  int(students_list[index]["math"])
+   grade2 =  int(students_list[index]["physics"])
+   grade3 =  int(students_list[index]["chemistry"])
+   grade4 =  int(students_list[index]["programming"])
+
+   
+   sum_total = grade1 + grade2 + grade3 + grade4
+   average = sum_total / 4
+   total.append(sum_total)
+   max_index = total.index(min(total))
+   print(f"Lowest: {students_list[max_index]["name"]}🤒")
+   print(f"Average: {average}%")
+   count+=1
+   index+=1
+
+def class_average(index, count, total1):
+    while count < len(students_list):
+      grade1 =  int(students_list[index]["math"])
+      grade2 =  int(students_list[index]["physics"])
+      grade3 =  int(students_list[index]["chemistry"])
+      grade4 =  int(students_list[index]["programming"])
+
+      
+      sum_total = grade1 + grade2 + grade3 + grade4
+      average = sum_total / 4
+      total_average.append(average)
+      count+=1
+      index+=1
+
+      for averages in total_average:
+       total1 += averages
+
+      average_total = total1/len(total_average)
+      print(f"Class Average: {average_total}%")
+
+     

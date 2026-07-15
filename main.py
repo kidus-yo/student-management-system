@@ -15,7 +15,11 @@ def main():
   elif choice == 5:
    delete_student(index, running)
   elif choice == 6:
-   top_student(index, count, running)
+   top_student(index, count)
+  elif choice == 7:
+   lowest_student(index, count)
+  elif choice == 8:
+   class_average(index, count, total1)
   elif choice == 11:
    print("-" * 30)
    print("Wish you the best Luck🌼🌷")
