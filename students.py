@@ -1,1 +1,2 @@
 students_list  = []
+total = []

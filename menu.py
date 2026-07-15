@@ -3,7 +3,9 @@ from students import *
 
 index = 0
 running = True
+count_student = 1
 
+count = 0
 
 def main_menu():
    print("Welcome to Student Managment System💢")
@@ -23,7 +25,7 @@ def main_menu():
    choice = int(input("Please Enter your choice?: "))
    return choice
 
-def add_student():
+def add_student(count_student):
    name = input("Enter Name: ")
    student_ID = int(input("Enter an ID: "))
    age = int(input("Enter age: "))
@@ -44,7 +46,8 @@ def add_student():
             }
 
    students_list.append(students)
-            
+   count_student+=1
+   print(f"{count_student}")        
 def search_student(running, index):
    number = int(input("Enter the ID of the student: "))
    while running:     
@@ -107,6 +110,7 @@ def update_student(index, running):
      print("Student NOT Found❌")
 
 def delete_student(index, running):
+  
   delete = int(input("Enter the id of the student you want to delete: "))
   while running:
    if delete == students_list[index]["ID"]:
@@ -118,3 +122,21 @@ def delete_student(index, running):
      index+=1
    else:
      print("Student NOT found!‼️")
+
+def top_student(index, count, running):
+ while count < len(students_list):
+   grade1 =  int(students_list[index]["math"])
+   grade2 =  int(students_list[index]["physics"])
+   grade3 =  int(students_list[index]["chemistry"])
+   grade4 =  int(students_list[index]["programming"])
+
+   
+   sum_total = grade1 + grade2 + grade3 + grade4
+   average = sum_total / 4
+   total.append(sum_total)
+   max_index = total.index(max(total))
+   print(f"Top Student: {students_list[max_index]["name"]}#1️⃣")
+   print(f"Average: {average}")
+   count+=1
+   index+=1
+ 

@@ -5,7 +5,7 @@ def main():
  while True:
   choice = main_menu()
   if choice == 1:
-    add_student()
+    add_student(count_student)
   elif choice == 2:
    search_student(running, index)
   elif choice == 3:
@@ -14,6 +14,8 @@ def main():
    update_student(index, running)
   elif choice == 5:
    delete_student(index, running)
+  elif choice == 6:
+   top_student(index, count, running)
   elif choice == 11:
    print("-" * 30)
    print("Wish you the best Luck🌼🌷")
