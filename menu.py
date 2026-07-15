@@ -181,6 +181,7 @@ def class_average(index, count, total1):
      
 def total_students():
   number_students = len(students_list)
+  print("_" * 30)
   print(f"Total Students: {number_students}")
   print("_" * 30)
 
