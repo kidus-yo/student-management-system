@@ -5,7 +5,7 @@ def main():
  while True:
   choice = main_menu()
   if choice == 1:
-    add_student(count_student)
+    add_student()
   elif choice == 2:
    search_student(running, index)
   elif choice == 3:
@@ -28,5 +28,7 @@ def main():
    print("-" * 30)
    print("Wish you the best Luck🌼🌷")
    print("-" * 30)
+  else:
+   print("Please Enter only a valid number(1-11)‼️")
    break
 main()

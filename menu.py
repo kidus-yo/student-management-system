@@ -5,7 +5,6 @@ index = 0
 running = True
 count_student = 1
 total1 = 0
-
 count = 0
 
 def main_menu():
@@ -26,7 +25,7 @@ def main_menu():
    choice = int(input("Please Enter your choice?: "))
    return choice
 
-def add_student(count_student):
+def add_student():
    name = input("Enter Name: ")
    student_ID = int(input("Enter an ID: "))
    age = int(input("Enter age: "))
@@ -47,8 +46,10 @@ def add_student(count_student):
             }
 
    students_list.append(students)
-   count_student+=1
-   print(f"{count_student}")        
+print("*" * 30)
+print("Student Added Successfully!✅")
+print("*" * 30)
+     
 def search_student(running, index):
    number = int(input("Enter the ID of the student: "))
    while running:     
