@@ -28,7 +28,9 @@ def main():
    print("-" * 30)
    print("Wish you the best Luck🌼🌷")
    print("-" * 30)
+   break
   else:
    print("Please Enter only a valid number(1-11)‼️")
    break
-main()
+if __name__ == "__main__":
+ main()
